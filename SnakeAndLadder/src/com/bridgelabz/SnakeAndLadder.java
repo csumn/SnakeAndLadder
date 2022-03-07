@@ -26,8 +26,7 @@ public class SnakeAndLadder {
 					playerOnePosition += numberOnDie;
 					if (playerOnePosition > WINNING_POSITION) {
 						playerOnePosition -= numberOnDie;
-						System.out
-								.println("Current position is moving avove 100... Please roll the Die Next Time !!!!!");
+						System.out.println("Current position is moving avove 100... Please roll the Die Next Time !!!!!");
 					}
 					count_One++;
 					break;
@@ -57,8 +56,7 @@ public class SnakeAndLadder {
 					playerTwoPosition += numberOnDie2;
 					if (playerTwoPosition > WINNING_POSITION) {
 						playerTwoPosition -= numberOnDie2;
-						System.out
-								.println("Current position is moving above 100... Please roll the Die Next Time !!!!!");
+						System.out.println("Current position is moving above 100... Please roll the Die Next Time !!!!!");
 					}
 					count_Two++;
 					break;
