@@ -7,7 +7,7 @@ public class SnakeAndLadder{
 
 
 	public static void main(String[] args) {
-		int playerPosition = 0;
+		int playerPosition = 0, count=0;
 		System.out.println("Initial position of player is : " +playerPosition);
 		
 		while(playerPosition<WINNIGPOSITION) {
@@ -23,6 +23,7 @@ public class SnakeAndLadder{
 				playerPosition-=numberOnDie;
 				System.out.println("Current position is moving avove 100... Please roll the die again !!!!!");
 			}
+			count++;
 				break;
 		case SNAKE:
 			System.out.println("The option is Snake " +SNAKE);
@@ -35,7 +36,8 @@ public class SnakeAndLadder{
 			}
 		System.out.println("Current Position of Player :  "+playerPosition);
 		}
-		System.out.println("player Won");		
+		System.out.println("player Won");
+		System.out.println(count+ " times die has been rolled to win the game ");
 	}
 
 	private static int RandomOption() {
