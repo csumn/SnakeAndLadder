@@ -3,12 +3,14 @@ public class SnakeAndLadder{
 	public static final int NO_PLAY = 0;
 	public static final int LADDER = 1;
 	public static final int SNAKE = 2;
+	public static final int WINNIGPOSITION = 100;
+
 
 	public static void main(String[] args) {
 		int playerPosition = 0;
 		System.out.println("Initial position of player is : " +playerPosition);
 		
-		while(playerPosition<100) {
+		while(playerPosition<WINNIGPOSITION) {
 		int numberOnDie = RandomDieValue();
 		System.out.println("Number on Die is : " +numberOnDie);
 		int option = RandomOption();
@@ -17,9 +19,11 @@ public class SnakeAndLadder{
 		case LADDER :
 			System.out.println("The option is Ladder " +LADDER );
 			playerPosition+=numberOnDie;
-			if (playerPosition>100)
-				playerPosition=100;
-			break;
+			if (playerPosition>100) {
+				playerPosition-=numberOnDie;
+				System.out.println("Current position is moving avove 100... Please roll the die again !!!!!");
+			}
+				break;
 		case SNAKE:
 			System.out.println("The option is Snake " +SNAKE);
 			playerPosition-=numberOnDie;
